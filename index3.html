@@ -46,20 +46,18 @@
     
     <script>
 
-        //querySelector -> css 집어넣을 수 있음. 즉, css문법 그대로 쓸 수 있는 셀렉터임.
-        //사용 ex) class : .list-group , id : #test1
-        //document.querySelector('.list-group')
-        //특징 : 맨 위에 나오는 한개만 찾아 준다. 2번째부터 찾고 싶으면 querySelectorAll하고 인덱싱하면된다.
-        //document.querySelectorAll('.list-group-item')[1]
-
 
         //navbar-toggler버튼 누르면 콜백함수 실행
-        document.getElementsByClassName('navbar-toggler')
-        [0].addEventListener('click',function(){
-            //show라는 클래스명을 이 요소(list-group)에 추가
-            //document.getElementsByClassName('list-group')[0].classList.add('show');
-            //show가 있으면 제거, 없으면 추가하라는 뜻. <- Q.버튼 한번 더 누르면 숨기기 어떻게? classList.toggle('클래스명')
-            document.getElementsByClassName('list-group')[0].classList.toggle('show');
+        // document.getElementsByClassName('navbar-toggler')
+        // [0].addEventListener('click',function(){
+        //     //show라는 클래스명을 이 요소(list-group)에 추가
+        //     //document.getElementsByClassName('list-group')[0].classList.add('show');
+        //     //show가 있으면 제거, 없으면 추가하라는 뜻. <- Q.버튼 한번 더 누르면 숨기기 어떻게? classList.toggle('클래스명')
+        //     document.getElementsByClassName('list-group')[0].classList.toggle('show');
+        // })
+
+        document.querySelector(".navbar-toggler").addEventListener('click',function(){
+            document.querySelectorAll('.list-group')[0].classList.toggle('show');
         })
 
 
