@@ -8,8 +8,8 @@
 <body>
 
     <div class = "alert-box" id = 'alert'>
-        <p id = "title">알림창임</p>
-        <button onclick = "알림창열기('none') ">닫기</button>
+        <p class = "title1">알림창임</p>
+        <button class = "title1" onclick = "알림창열기('none') ">닫기</button>
     </div>
 
     <button onclick = "아이디알림창() ">버튼1</button>
@@ -19,7 +19,8 @@
 
  
         function 아이디알림창(){
-            document.getElementById('title').innerHTML = '아이디 입력하셈';
+            //class 명으로도 찾을 수 있다. 중복가능하다. 따라서, 몇번째 요소인지 인덱싱을 해주어야 한다.
+            document.getElementsByClassName('title1')[0].innerHTML = '아이디 입력하셈';
             document.getElementById('alert').style.display = 'block';
 
         }   
