@@ -8,19 +8,33 @@
 <body>
 
     <div class = "alert-box" id = 'alert'>
-        <p class = "title1">알림창임</p>
-        <button class = "title1" onclick = "알림창열기('none') ">닫기</button>
+        <p id = "title">알림창임</p>
+        <button id = 'close' >닫기</button>
     </div>
 
     <button onclick = "아이디알림창() ">버튼1</button>
     <button onclick = "비번알림창() ">버튼2</button>
 
     <script>
+        //addEventListener() -- 이거 쓰면 onclick필요 없음. 유저 행동 감시자
+        /*
+            찾고, 이벤트이름 (onclick, keydown(키입력감지), scroll, mouseover등...), function 실행
+                            얘를                                클릭하면            여기있는 콜백 함수의 코드 실행
+            document.getElementById('close').addEventListener('click',function(){코드~~~})
+
+            cf) 콜백함수 : 파라미터자리에 들어가는 함수. 뭔가 순차적으로 실행하고 싶을때 많이 씀.
+        */
+        
+        document.getElementById('close').addEventListener('mouseover',function(){
+            document.getElementById('alert').style.display = 'none';
+
+        })
+
+        
 
  
         function 아이디알림창(){
-            //class 명으로도 찾을 수 있다. 중복가능하다. 따라서, 몇번째 요소인지 인덱싱을 해주어야 한다.
-            document.getElementsByClassName('title1')[0].innerHTML = '아이디 입력하셈';
+            document.getElementById('title').innerHTML = '아이디 입력하셈';
             document.getElementById('alert').style.display = 'block';
 
         }   
@@ -30,9 +44,7 @@
 
         }      
         
-        function 알림창열기(구멍){
-            document.getElementById('alert').style.display = 구멍;
-        }
+
 
 
 
