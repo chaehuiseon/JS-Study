@@ -1,0 +1,47 @@
+HTML 조작가능. (JSTMsms dldb)
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--css 파일 링크-->
+    <link rel="stylesheet" href = "main.css"> 
+</head>
+<body>
+    <h1 id = "hello">언녕하세요</h1>
+    <h1 id = "hi">JS 초보에요</h1>
+
+    <!--
+        UI만드는 step
+        1. HTML/CSS 로 미리 디자인(필요하면 미리 숨김)
+        2. 필요할때 보여다라고 코드짬(자바스크립트)
+s
+    -->
+    <div class = "alert-box" id = 'alert'>알림창임
+        <button onclick = "controlAlert('none') ">닫기</button>
+    </div>
+    <!--온클릭안에 잦바스크립트 짜면됨 alert박스 보여주셈 짜면됨-->
+    <button onclick = "controlAlert('block')" >버튼</button>
+
+    <!--html 파일 위에서부터 읽기 때문에 script 아래에 이쓴ㄴ 것이다. -->
+    <script>
+        
+        //html 문서의 id가 hello 인 요소를 찾아와. 그거 내부 html 을 안녕으로.
+        // 1. 바꿀요소id,   2. 무엇을,   3.어떻게 
+        //getElementById -> 셀렉터
+        document.getElementById('hello').innerHTML = "안녕";
+        document.getElementById('hello').style.color = "red";
+        document.getElementById('hello').style.fontSize = "16px";
+        document.getElementById('hi').innerHTML = "JS 고수에요";
+        
+        function controlAlert(state){
+            document.getElementById('alert').style.display = state;
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
