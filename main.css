@@ -5,3 +5,11 @@
     border-radius: 5px;
     display: none;
 }
+
+.list-group{
+    display: none;
+}
+/* css 파일은 하단에 적을수록 우선적용 받는다.*/
+.show{
+    display: block;
+}
