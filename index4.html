@@ -40,11 +40,8 @@
       <p class = "hello">안녕</p>
       <p class = "hello">안녕</p>
 
-    
 
-
-
-
+      <button id = "test-btn">버튼</button>
     <button type="button" class="btn btn-primary">Primary</button>
 
     
@@ -55,6 +52,20 @@
         // document.querySelectorAll('.hello')[2].innerHTML = '바보';
         $('.hello').html('바보'); //$ -> queryselector
         //모든 hello전부 다 찾고 변경명령을 주면 전부 적용이 됨.
+
+
+
+
+        //document.querySelector('#test-btn').addEventListener() //test-btn누르면 특정 이벤트 사용
+        //jquery문법으로 변경. document.queryselector = $, addEventListener() = on
+        $('#test-btn').on('click',function(){
+           //jquery는 간단한 UI애니메이션 제공
+            //$('.hello').hide() //hide = display none 과 거의 유사. css가 잼병인 사람들은 간편.
+            $('.hello').slideUp();
+        })
+
+
+        
 
 
         document.querySelector(".navbar-toggler").addEventListener('click',function(){
