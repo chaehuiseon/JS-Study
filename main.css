@@ -20,11 +20,19 @@
     background:rgba(0,0,0,0.5);
     z-index: 5;
     padding: 30px;
-    display: none;
+
+    /* 시작 스타일 */
+    visibility: hidden; /*애니메이션 display none. 효과는 똑같으나, display none은 코드상에서 지우고, visibility는 모습만 숨김.*/
+    opacity: 0;
+    transition: all 1s; /*1초에 걸쳐 css 속성 변경*/
+
 }
 
 
-
 .show-modal {
-    display: block;
+    /* 최종 스타일 */
+    visibility: visible; 
+    opacity: 1;
+
+    
 }
